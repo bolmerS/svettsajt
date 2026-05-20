@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svettfri – Min ärliga guide till livet med hyperhidros</title>
+    <meta name="description" content="Personlig guide till hyperhidros (kraftig svettning). Jag delar vad jag testat – produkter, behandlingar och vad som faktiskt funkade.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Svettfri</div>
+            <ul class="nav-links">
+                <li><a href="#start">Start</a></li>
+                <li><a href="#min-resa">Min resa</a></li>
+                <li><a href="#quiz">Testa dig själv</a></li>
+                <li><a href="#produkter">Vad jag testat</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="start" class="hero">
+        <div class="container">
+            <h1>Jag har levt med hyperhidros i åratal.<br>Här delar jag vad som faktiskt funkade.</h1>
+            <p class="lead">Den här sajten är inte skriven av en läkare. Den är skriven av någon som faktiskt vet hur det är att skaka hand med blöta handflator, byta strumpor mitt på dagen, eller undvika ljusa skjortor på sommaren.</p>
+            <a href="#quiz" class="cta-button">Testa hur kraftig din svettning är →</a>
+        </div>
+    </section>
+
+    <section id="min-resa" class="content-section">
+        <div class="container">
+            <h2>Min resa</h2>
+            <p>Jag minns första gången jag insåg att det inte var "normalt". [Här skriver du din egen story – när det började, hur det påverkade dig, vad du först provade.]</p>
+            <p>Efter år av tester, produkter som inte funkade och en del som faktiskt gjorde skillnad – bestämde jag mig för att samla allt här. Inte för att sälja något specifikt. Utan för att jag önskar att jag haft den här sajten själv när jag började.</p>
+            <a href="#" class="link-arrow">Läs hela min historia →</a>
+        </div>
+    </section>
+
+    <section id="quiz" class="quiz-section">
+        <div class="container">
+            <h2>Hur kraftig är din svettning?</h2>
+            <p>Det här är en förenklad version av HDSS-skalan (Hyperhidrosis Disease Severity Scale) som läkare använder. Svaret hjälper dig förstå var du står.</p>
+            
+            <div class="quiz-card" id="quiz-card">
+                <div class="quiz-question">
+                    <p class="question-number">Fråga <span id="current-q">1</span> av 4</p>
+                    <h3 id="question-text">Hur ofta märker du att du svettas mer än andra?</h3>
+                    <div class="quiz-options" id="quiz-options">
+                        <button class="quiz-option" data-value="1">Sällan eller aldrig</button>
+                        <button class="quiz-option" data-value="2">Ibland, i vissa situationer</button>
+                        <button class="quiz-option" data-value="3">Ofta, flera gånger per vecka</button>
+                        <button class="quiz-option" data-value="4">Konstant, det påverkar mig dagligen</button>
+                    </div>
+                </div>
+                
+                <div class="quiz-result" id="quiz-result" style="display:none;">
+                    <h3 id="result-title"></h3>
+                    <p id="result-text"></p>
+                    <button class="cta-button" onclick="restartQuiz()">Gör om testet</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="produkter" class="content-section">
+        <div class="container">
+            <h2>Vad jag testat</h2>
+            <p>Här samlar jag de produkter och metoder jag faktiskt provat – ärligt rankat från bäst till sämst för min situation.</p>
+            <div class="product-grid">
+                <div class="product-card">
+                    <h3>Aluminiumklorid</h3>
+                    <p>Förstahandsval för många. Jag testade tre olika märken.</p>
+                    <a href="#" class="link-arrow">Läs mer →</a>
+                </div>
+                <div class="product-card">
+                    <h3>Jontofores hemma</h3>
+                    <p>En investering, men för mig blev det vändpunkten.</p>
+                    <a href="#" class="link-arrow">Läs mer →</a>
+                </div>
+                <div class="product-card">
+                    <h3>Svettabsorberande kläder</h3>
+                    <p>Inte en lösning, men gör vardagen drägligare.</p>
+                    <a href="#" class="link-arrow">Läs mer →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p><strong>Disclaimer:</strong> Jag är inte läkare. Innehållet på den här sajten är min personliga erfarenhet. Rådfråga alltid en hudläkare innan du börjar någon behandling.</p>
+            <p>© 2026 Svettfri. Sajten innehåller affiliate-länkar.</p>
+        </div>
+    </footer>
+
+    <script>
+        const questions = [
+            {
+                q: "Hur ofta märker du att du svettas mer än andra?",
+                options: [
+                    {text: "Sällan eller aldrig", value: 1},
+                    {text: "Ibland, i vissa situationer", value: 2},
+                    {text: "Ofta, flera gånger per vecka", value: 3},
+                    {text: "Konstant, det påverkar mig dagligen", value: 4}
+                ]
+            },
+            {
+                q: "Påverkar svettningen dina aktiviteter (jobb, sociala situationer, träning)?",
+                options: [
+                    {text: "Aldrig", value: 1},
+                    {text: "Lite, men jag hanterar det", value: 2},
+                    {text: "Ofta, jag undviker vissa situationer", value: 3},
+                    {text: "Det styr mitt liv", value: 4}
+                ]
+            },
+            {
+                q: "Hur ofta byter du kläder under en dag på grund av svett?",
+                options: [
+                    {text: "Aldrig", value: 1},
+                    {text: "Vid träning eller varmt väder", value: 2},
+                    {text: "1 gång om dagen även utan ansträngning", value: 3},
+                    {text: "Flera gånger om dagen", value: 4}
+                ]
+            },
+            {
+                q: "Har du provat antiperspiranter (vanliga eller med aluminiumklorid)?",
+                options: [
+                    {text: "Funkar bra för mig", value: 1},
+                    {text: "Hjälper lite", value: 2},
+                    {text: "Provat men ingen större effekt", value: 3},
+                    {text: "Provat allt, inget funkar", value: 4}
+                ]
+            }
+        ];
+
+        let currentQuestion = 0;
+        let totalScore = 0;
+
+        function loadQuestion() {
+            const q = questions[currentQuestion];
+            document.getElementById('current-q').textContent = currentQuestion + 1;
+            document.getElementById('question-text').textContent = q.q;
+            
+            const optionsContainer = document.getElementById('quiz-options');
+            optionsContainer.innerHTML = '';
+            
+            q.options.forEach(opt => {
+                const btn = document.createElement('button');
+                btn.className = 'quiz-option';
+                btn.textContent = opt.text;
+                btn.onclick = () => selectAnswer(opt.value);
+                optionsContainer.appendChild(btn);
+            });
+        }
+
+        function selectAnswer(value) {
+            totalScore += value;
+            currentQuestion++;
+            
+            if (currentQuestion < questions.length) {
+                loadQuestion();
+            } else {
+                showResult();
+            }
+        }
+
+        function showResult() {
+            document.querySelector('.quiz-question').style.display = 'none';
+            document.getElementById('quiz-result').style.display = 'block';
+            
+            let title, text;
+            if (totalScore <= 6) {
+                title = "Mild svettning";
+                text = "Du verkar ha relativt lindrig svettning. Vanliga antiperspiranter eller produkter med aluminiumklorid (som Driclor eller Absolute Dry) räcker troligen för dig.";
+            } else if (totalScore <= 10) {
+                title = "Måttlig hyperhidros";
+                text = "Din svettning påverkar troligen din vardag mer än normalt. Starkare aluminiumkloridprodukter är ett bra första steg – om de inte räcker kan jontofores vara nästa nivå att utforska.";
+            } else if (totalScore <= 13) {
+                title = "Kraftig hyperhidros";
+                text = "Det låter som att svettningen påverkar ditt liv betydligt. Det är värt att besöka en hudläkare. Jontofores-behandling hemma kan ge stor lindring – jag har själv haft mycket hjälp av det.";
+            } else {
+                title = "Mycket kraftig hyperhidros";
+                text = "Din svettning verkar vara av en grad där professionell behandling är värd att utforska. En hudläkare kan diskutera jontofores, Botox eller andra alternativ. Du är inte ensam – och det finns hjälp att få.";
+            }
+            
+            document.getElementById('result-title').textContent = title;
+            document.getElementById('result-text').textContent = text;
+        }
+
+        function restartQuiz() {
+            currentQuestion = 0;
+            totalScore = 0;
+            document.querySelector('.quiz-question').style.display = 'block';
+            document.getElementById('quiz-result').style.display = 'none';
+            loadQuestion();
+        }
+
+        loadQuestion();
+    </script>
+</body>
+</html>
