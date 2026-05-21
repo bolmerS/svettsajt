@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Svettfri – Min ärliga guide till livet med hyperhidros</title>
     <meta name="description" content="Personlig guide till hyperhidros (kraftig svettning). Jag delar vad jag testat – produkter, behandlingar och vad som faktiskt funkade.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -55,9 +58,14 @@
                     </div>
                 </div>
                 
-                <div class="quiz-result" id="quiz-result" style="display:none;">
+               <div class="quiz-result" id="quiz-result" style="display:none;">
                     <h3 id="result-title"></h3>
                     <p id="result-text"></p>
+                    <div class="rec-products" id="rec-products"></div>
+                    <div class="rec-article-link-wrap">
+                        <p id="rec-article-text"></p>
+                        <a id="rec-article-link" href="#" class="link-arrow"></a>
+                    </div>
                     <button class="cta-button" onclick="restartQuiz()">Gör om testet</button>
                 </div>
             </div>
@@ -71,8 +79,8 @@
             <div class="product-grid">
                 <div class="product-card">
                     <h3>Aluminiumklorid</h3>
-                    <p>Förstahandsval för många. Jag testade tre olika märken.</p>
-                    <a href="#" class="link-arrow">Läs mer →</a>
+                    <p>Förstahandsval för många. Jag testade tre olika märken: Driclor, Absolut Torr och Perspirex.</p>
+                    <a href="driclor-vs-absolut-torr-vs-perspirex.html" class="link-arrow">Läs min jämförelse →</a>
                 </div>
                 <div class="product-card">
                     <h3>Jontofores hemma</h3>
@@ -135,6 +143,119 @@
             }
         ];
 
+        const recommendations = {
+            mild: {
+                title: "Mild svettning",
+                text: "Du verkar ha relativt lindrig svettning. Vanliga starka antiperspiranter räcker troligen för dig. Här är några förstahandsval:",
+                products: [
+                    {
+                        icon: "🧴",
+                        name: "Absolut Torr 35 ml",
+                        desc: "Prisvärd antiperspirant med aluminiumklorid. Bra första steg om vanlig deodorant inte räcker.",
+                        link: "https://www.apotea.se/absolut-torr-35-ml"
+                    },
+                    {
+                        icon: "💧",
+                        name: "Absolut Torr Roll-On 25 ml",
+                        desc: "Lättare applicering för dig som tycker droppflaska är obekvämt.",
+                        link: "https://www.apotea.se/absolut-torr-roll-on-25-ml"
+                    }
+                ],
+                article: {
+                    text: "Vill du jämföra olika antiperspiranter?",
+                    link: "driclor-vs-absolut-torr-vs-perspirex.html",
+                    cta: "Läs min jämförelse →"
+                }
+            },
+            moderate: {
+                title: "Måttlig hyperhidros",
+                text: "Din svettning påverkar troligen din vardag mer än normalt. Starkare aluminiumkloridprodukter är ett bra steg framåt:",
+                products: [
+                    {
+                        icon: "🧴",
+                        name: "Absolut Torr 35 ml",
+                        desc: "Min personliga favorit. Bäst förhållande pris/effekt av de jag testat.",
+                        link: "https://www.apotea.se/absolut-torr-35-ml"
+                    },
+                    {
+                        icon: "💎",
+                        name: "Perspirex Original 20 ml",
+                        desc: "Mildare formula, mindre sveda men dyrare per ml.",
+                        link: "https://www.apotea.se/perspirex"
+                    },
+                    {
+                        icon: "👕",
+                        name: "Svettabsorberande inlägg",
+                        desc: "Komplement för att skydda kläder medan antiperspiranten verkar.",
+                        link: "https://www.apotea.se/sok?q=svettabsorberande"
+                    }
+                ],
+                article: {
+                    text: "Vill du veta vilken som passar dig bäst?",
+                    link: "driclor-vs-absolut-torr-vs-perspirex.html",
+                    cta: "Läs min jämförelse av Driclor, Absolut Torr och Perspirex →"
+                }
+            },
+            strong: {
+                title: "Kraftig hyperhidros",
+                text: "Det låter som att svettningen påverkar ditt liv betydligt. Aluminiumklorid kan fortfarande vara ett alternativ – men du bör också utforska starkare behandlingar:",
+                products: [
+                    {
+                        icon: "🛡️",
+                        name: "Perspirex Maximum for Men 20 ml",
+                        desc: "En av de starkare antiperspiranterna på svenska marknaden.",
+                        link: "https://www.apotea.se/perspirex"
+                    },
+                    {
+                        icon: "🧴",
+                        name: "Absolut Torr 35 ml",
+                        desc: "Som första försök innan du går vidare till starkare behandlingar.",
+                        link: "https://www.apotea.se/absolut-torr-35-ml"
+                    },
+                    {
+                        icon: "🩺",
+                        name: "Konsultera hudläkare",
+                        desc: "På den här nivån är det värt att utreda jontofores eller Botox-behandling.",
+                        link: "https://www.1177.se"
+                    }
+                ],
+                article: {
+                    text: "Funderar du på jontofores?",
+                    link: "#",
+                    cta: "Min guide till jontofores (kommer snart)"
+                }
+            },
+            severe: {
+                title: "Mycket kraftig hyperhidros",
+                text: "Din svettning verkar vara av en grad där professionell behandling är värd att utforska. Du är inte ensam – och det finns hjälp att få.",
+                products: [
+                    {
+                        icon: "🩺",
+                        name: "Boka tid hos hudläkare",
+                        desc: "Första steget – en läkare kan diskutera jontofores, Botox eller andra alternativ.",
+                        link: "https://www.1177.se"
+                    },
+                    {
+                        icon: "⚡",
+                        name: "Jontofores-behandling",
+                        desc: "Behandling med svag elektrisk ström. Kan göras hemma efter läkarbedömning.",
+                        link: "#"
+                    },
+                    {
+                        icon: "💉",
+                        name: "Botox-information",
+                        desc: "Effektivt mot armhåle-svettning men kräver upprepade behandlingar.",
+                        link: "#"
+                    }
+                ],
+                article: {
+                    text: "Vill du läsa om hur jontofores fungerar?",
+                    link: "#",
+                    cta: "Min guide till jontofores (kommer snart)"
+                }
+            }
+        };
+
         let currentQuestion = 0;
         let totalScore = 0;
 
@@ -170,23 +291,34 @@
             document.querySelector('.quiz-question').style.display = 'none';
             document.getElementById('quiz-result').style.display = 'block';
             
-            let title, text;
-            if (totalScore <= 6) {
-                title = "Mild svettning";
-                text = "Du verkar ha relativt lindrig svettning. Vanliga antiperspiranter eller produkter med aluminiumklorid (som Driclor eller Absolute Dry) räcker troligen för dig.";
-            } else if (totalScore <= 10) {
-                title = "Måttlig hyperhidros";
-                text = "Din svettning påverkar troligen din vardag mer än normalt. Starkare aluminiumkloridprodukter är ett bra första steg – om de inte räcker kan jontofores vara nästa nivå att utforska.";
-            } else if (totalScore <= 13) {
-                title = "Kraftig hyperhidros";
-                text = "Det låter som att svettningen påverkar ditt liv betydligt. Det är värt att besöka en hudläkare. Jontofores-behandling hemma kan ge stor lindring – jag har själv haft mycket hjälp av det.";
-            } else {
-                title = "Mycket kraftig hyperhidros";
-                text = "Din svettning verkar vara av en grad där professionell behandling är värd att utforska. En hudläkare kan diskutera jontofores, Botox eller andra alternativ. Du är inte ensam – och det finns hjälp att få.";
-            }
+            let level;
+            if (totalScore <= 6) level = 'mild';
+            else if (totalScore <= 10) level = 'moderate';
+            else if (totalScore <= 13) level = 'strong';
+            else level = 'severe';
             
-            document.getElementById('result-title').textContent = title;
-            document.getElementById('result-text').textContent = text;
+            const rec = recommendations[level];
+            
+            let productsHtml = '';
+            rec.products.forEach(p => {
+                productsHtml += `
+                    <div class="rec-product">
+                        <div class="rec-icon">${p.icon}</div>
+                        <div class="rec-product-content">
+                            <h4>${p.name}</h4>
+                            <p>${p.desc}</p>
+                            <a href="${p.link}" target="_blank" rel="noopener" class="rec-button">Se mer →</a>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            document.getElementById('result-title').textContent = rec.title;
+            document.getElementById('result-text').textContent = rec.text;
+            document.getElementById('rec-products').innerHTML = productsHtml;
+            document.getElementById('rec-article-text').textContent = rec.article.text;
+            document.getElementById('rec-article-link').href = rec.article.link;
+            document.getElementById('rec-article-link').textContent = rec.article.cta;
         }
 
         function restartQuiz() {
