@@ -29,9 +29,8 @@
             <h1>Hör av dig</h1>
             <p class="article-lead">Frågor, egna erfarenheter, förslag på produkter jag borde testa, eller bara en kommentar på något du läst – jag läser allt.</p>
 
-            <div class="contact-form-wrap">
-                <form action="https://formspree.io/f/xredqonn" method="POST" class="contact-form">
-                    <input type="hidden" name="_next" value="https://svettfri.com/tack.html">
+            <div class="contact-form-wrap" id="form-wrap">
+                <form id="contact-form" class="contact-form">
                     <div class="form-field">
                         <label for="name">Namn <span class="optional">(valfritt)</span></label>
                         <input type="text" id="name" name="name" placeholder="Anonymt funkar bra">
@@ -58,8 +57,15 @@
                         <textarea id="message" name="message" rows="6" required placeholder="Skriv ditt meddelande här..."></textarea>
                     </div>
 
-                    <button type="submit" class="cta-button">Skicka meddelande</button>
+                    <button type="submit" class="cta-button" id="submit-btn">Skicka meddelande</button>
                 </form>
+            </div>
+
+            <div class="contact-form-wrap" id="thank-you" style="display:none; text-align: center;">
+                <div style="font-size: 48px; margin-bottom: 16px;">✓</div>
+                <h3 style="font-family: var(--font-display); font-size: 28px; margin-bottom: 12px; color: var(--color-accent);">Tack för ditt meddelande!</h3>
+                <p style="color: var(--color-ink-soft); font-size: 17px; margin-bottom: 24px;">Jag har tagit emot ditt meddelande och svarar så snart jag kan. Eftersom det är ett personligt ämne kan det dröja några dagar – men jag läser allt.</p>
+                <a href="index.html" class="link-arrow">Tillbaka till startsidan →</a>
             </div>
 
             <h2>Vad du kan höra av dig om</h2>
@@ -84,5 +90,45 @@
             <p>© 2026 Svettfri. Sajten innehåller affiliate-länkar.</p>
         </div>
     </footer>
+
+    <script>
+        const form = document.getElementById('contact-form');
+        const formWrap = document.getElementById('form-wrap');
+        const thankYou = document.getElementById('thank-you');
+        const submitBtn = document.getElementById('submit-btn');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            submitBtn.textContent = 'Skickar...';
+            submitBtn.disabled = true;
+            
+            const data = new FormData(form);
+            
+            try {
+                const response = await fetch('https://formspree.io/f/xredqonn', {
+                    method: 'POST',
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    formWrap.style.display = 'none';
+                    thankYou.style.display = 'block';
+                    thankYou.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    alert('Något gick fel. Försök igen eller mejla direkt.');
+                    submitBtn.textContent = 'Skicka meddelande';
+                    submitBtn.disabled = false;
+                }
+            } catch (error) {
+                alert('Något gick fel. Kontrollera din internetanslutning.');
+                submitBtn.textContent = 'Skicka meddelande';
+                submitBtn.disabled = false;
+            }
+        });
+    </script>
 </body>
 </html>
