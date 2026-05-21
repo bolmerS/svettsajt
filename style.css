@@ -652,3 +652,82 @@ footer strong {
         padding: 28px 24px;
     }
 }
+
+/* ===== Contact form ===== */
+.contact-form-wrap {
+    background: var(--color-surface-2);
+    padding: 40px;
+    border-radius: var(--radius-lg);
+    margin: 24px 0 56px;
+    max-width: 680px;
+    border: 1px solid var(--color-border);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-field label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-ink);
+    letter-spacing: -0.1px;
+}
+
+.form-field .optional {
+    color: var(--color-ink-muted);
+    font-weight: 400;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    background: var(--color-surface);
+    border: 1.5px solid var(--color-border);
+    padding: 14px 16px;
+    border-radius: var(--radius);
+    font-size: 16px;
+    font-family: var(--font-body);
+    color: var(--color-ink);
+    transition: all 0.2s;
+    width: 100%;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    background: white;
+    box-shadow: 0 0 0 4px var(--color-accent-soft);
+}
+
+.form-field textarea {
+    resize: vertical;
+    min-height: 120px;
+    font-family: var(--font-body);
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    color: var(--color-ink-muted);
+}
+
+.contact-form .cta-button {
+    align-self: flex-start;
+    margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+    .contact-form-wrap {
+        padding: 28px 24px;
+    }
+}

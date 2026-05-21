@@ -13,7 +13,7 @@
 <body>
     <header>
         <nav>
-            <div class="logo"><a href="index.html" style="text-decoration:none;color:inherit;">Svettfri</a></div>
+            <div class="logo"><a href="index.html">Svettfri</a></div>
             <ul class="nav-links">
                 <li><a href="index.html">Start</a></li>
                 <li><a href="om-mig.html">Om mig</a></li>
@@ -29,14 +29,41 @@
             <h1>Hör av dig</h1>
             <p class="article-lead">Frågor, egna erfarenheter, förslag på produkter jag borde testa, eller bara en kommentar på något du läst – jag läser allt.</p>
 
-            <h2>Mejla mig</h2>
-            <p>Du når mig på:</p>
-            <p style="font-size: 22px; font-weight: 600; color: #0077b6;">kontakt@svettfri.se</p>
-            <p>Jag försöker svara inom några dagar. Eftersom det är ett personligt ämne kan jag inte garantera svar på allt – men jag läser varje meddelande.</p>
+            <div class="contact-form-wrap">
+                <form action="https://formspree.io/f/xredqonn" method="POST" class="contact-form">
+                    <div class="form-field">
+                        <label for="name">Namn <span class="optional">(valfritt)</span></label>
+                        <input type="text" id="name" name="name" placeholder="Anonymt funkar bra">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Din e-post *</label>
+                        <input type="email" id="email" name="email" required placeholder="din@email.com">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="subject">Ämne</label>
+                        <select id="subject" name="subject">
+                            <option value="Allmän fråga">Allmän fråga</option>
+                            <option value="Dela min erfarenhet">Jag vill dela min erfarenhet</option>
+                            <option value="Produktförslag">Förslag på produkt att testa</option>
+                            <option value="Samarbete">Samarbete / företag</option>
+                            <option value="Annat">Annat</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="message">Ditt meddelande *</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Skriv ditt meddelande här..."></textarea>
+                    </div>
+
+                    <button type="submit" class="cta-button">Skicka meddelande</button>
+                </form>
+            </div>
 
             <h2>Vad du kan höra av dig om</h2>
             <ul>
-                <li><strong>Egna erfarenheter</strong> – med produkter, behandlingar, eller livet med hyperhidros generellt</li>
+                <li><strong>Egna erfarenheter</strong> – med produkter, behandlingar eller livet med hyperhidros generellt</li>
                 <li><strong>Frågor om något jag skrivit</strong> – om en produkt, en behandling, eller varför jag rekommenderar något</li>
                 <li><strong>Förslag på vad jag borde skriva om</strong> – jag tar gärna emot tips</li>
                 <li><strong>Samarbeten</strong> – för märken eller företag som vill komma i kontakt</li>
@@ -44,6 +71,9 @@
 
             <h2>Vad jag inte kan hjälpa med</h2>
             <p>Jag är inte läkare och kan inte ge medicinska råd. Om du letar efter diagnos eller behandlingsplan – kontakta en hudläkare. Söker du akut hjälp – ring 1177.</p>
+
+            <h2>Hur länge tar svar?</h2>
+            <p>Jag försöker svara inom några dagar. Eftersom det är ett personligt ämne kan jag inte garantera svar på allt – men jag läser varje meddelande.</p>
         </div>
     </article>
 
