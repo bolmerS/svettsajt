@@ -1,0 +1,75 @@
+# Svettfri – Roadmap till första affiliate-deal
+
+## Slutmål (6 månader)
+Direktavtal med jontofores-leverantör (Hidroxa eller Dermadry) 
+med 15-20% provision per försäljning.
+
+## Strategin
+Bli DEN svenska jontofores-experten online. Bygga auktoritet 
+genom djupgående innehåll så att vi rankar för:
+- "jontofores" (1000 sökningar/mån)
+- "jontofores hemma" (300/mån)
+- "jontofores maskin" (200/mån)
+- "Hidroxa" (500/mån)
+- "Dermadry Sverige" (80/mån)
+- "jontofores pris" (100/mån)
+
+## Vad som behöver byggas
+
+### Innehåll (5 artiklar)
+- [ ] Pillar: "Jontofores hemma – den kompletta guiden" (4000 ord)
+- [ ] "Hidroxa recension – min erfarenhet" (1500 ord)
+- [ ] "Dermadry vs Hidroxa – vilken är bäst i Sverige" (2000 ord)
+- [ ] "Jontofores eller Botox – vad ska du välja" (1500 ord)
+- [ ] "Vad kostar jontofores i Sverige" (1500 ord)
+
+### Annat
+- [ ] Köpa egen jontofores-maskin (~5000 kr)
+- [ ] Använda den 2-3 månader, dokumentera resa
+- [ ] Foto + dagbok av min användning
+- [ ] Färdigställa hyperhidros-pillar (befintlig)
+
+## Takt
+1 artikel/vecka. Hållbart. Inget hetsande.
+
+## Kvartal 1 (juni-augusti 2026)
+- Färdigställa hyperhidros-pillar
+- Skriva 4-5 jontofores-artiklar  
+- Köpa jontofores-maskin
+- Påbörja personlig dokumentation av användning
+
+## Kvartal 2 (september-november 2026)
+- Trafik bör börja komma (200-1000 besökare/månad)
+- Search Console ska visa rankings för minst 3 av jontofores-sökorden
+- Sajten har 12-15 artiklar totalt
+
+## När jag ringer leverantörerna (~månad 6)
+Jag har:
+- 3000+ besökare/månad
+- Topp 10 ranking på "Hidroxa" eller "Dermadry Sverige"
+- Personlig recension med 3+ månaders användarerfarenhet
+- 5+ djupgående jontofores-artiklar
+
+Jag ringer:
+- Hidroxa (svensk distributör)
+- Dermadry (kanadensiskt eget affiliate-program)
+- Idromed (tysk tillverkare)
+
+## Stoppfunderingar / lärdomar
+
+### Hållbarhet
+1 artikel/vecka. Inte mer. Pengarna kommer först efter 6-12 månader. 
+Att jobba 8 timmar idag spelar ingen roll – det är RUTINEN över tid som vinner.
+
+### Mani-mönster
+Märks som "vill testa 100 gånger till" och svårt att sluta. 
+Lova att säga till partner. Lova att pausa när det krävs.
+
+### Verifieringar gjorda
+- Svettfri.com köpt och live
+- HTTPS aktivt
+- Google Analytics: G-NGWH5GH7LJ
+- Search Console verifierat
+- Sitemap inskickad (4 sidor)
+- Formspree: xredqonn (kontaktformulär)
+- Adtraction: kanal under granskning
