@@ -1,0 +1,6 @@
+exclude: 
+  - INSTALLATION.md 
+  - PUBLISHING.md 
+  - article-template.html 
+  - README.md 
+  - admin.html
