@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-05-25",
+  "lastUpdated": "2026-05-29",
   "products": [
     {
       "id": "absolut-torr-35",
@@ -8,17 +8,17 @@
       "category": "antiperspirant",
       "icon": "🧴",
       "shortDesc": "Prisvärd antiperspirant med aluminiumklorid. Bra första steg om vanlig deodorant inte räcker.",
+      "link": "https://track.adtraction.com/t/t?a=1487386077&as=2078015419&t=2&tk=1&cupa_sku=265603&url=https://dozapotek.se/dermix-absolut-torr-extra-effective-antiperspirant-dab-on-35-ml-265603",
+      "active": true,
       "favoriteDesc": "Min personliga favorit. Bäst förhållande pris/effekt av de jag testat.",
       "fallbackDesc": "Som första försök innan du går vidare till starkare behandlingar.",
-      "link": "https://www.apotea.se/absolut-torr-35-ml",
       "comparisonCard": {
         "experience": "Bäst effekt för mig. Märkbar skillnad redan efter 3-4 användningar.",
         "pricing": "Klart mest prisvärd av de tre. Säljs i 35 ml-flaska.",
         "pros": "Lätt att hitta i svenska apotek, prisvärd, märkbar effekt. Finns även som roll-on (25 ml) för enklare applicering.",
         "cons": "Sveda och klåda – men troligen för att jag använde den fel (mer nedan).",
         "ctaLabel": "Se på Apotea"
-      },
-      "active": true
+      }
     },
     {
       "id": "absolut-torr-rollon",
@@ -120,7 +120,10 @@
     "mild": {
       "title": "Mild svettning",
       "text": "Du verkar ha relativt lindrig svettning. Vanliga starka antiperspiranter räcker troligen för dig. Här är några förstahandsval:",
-      "productIds": ["absolut-torr-35", "absolut-torr-rollon"],
+      "productIds": [
+        "absolut-torr-35",
+        "absolut-torr-rollon"
+      ],
       "article": {
         "text": "Vill du jämföra olika antiperspiranter?",
         "link": "driclor-vs-absolut-torr-vs-perspirex.html",
@@ -130,8 +133,14 @@
     "moderate": {
       "title": "Måttlig hyperhidros",
       "text": "Din svettning påverkar troligen din vardag mer än normalt. Starkare aluminiumkloridprodukter är ett bra steg framåt:",
-      "productIds": ["absolut-torr-35", "perspirex-original", "svettabsorberande-inlagg"],
-      "useFavoriteDesc": ["absolut-torr-35"],
+      "productIds": [
+        "absolut-torr-35",
+        "perspirex-original",
+        "svettabsorberande-inlagg"
+      ],
+      "useFavoriteDesc": [
+        "absolut-torr-35"
+      ],
       "article": {
         "text": "Vill du veta vilken som passar dig bäst?",
         "link": "driclor-vs-absolut-torr-vs-perspirex.html",
@@ -141,8 +150,14 @@
     "strong": {
       "title": "Kraftig hyperhidros",
       "text": "Det låter som att svettningen påverkar ditt liv betydligt. Aluminiumklorid kan fortfarande vara ett alternativ – men du bör också utforska starkare behandlingar:",
-      "productIds": ["perspirex-max-men", "absolut-torr-35", "hudlakare-1177"],
-      "useFallbackDesc": ["absolut-torr-35"],
+      "productIds": [
+        "perspirex-max-men",
+        "absolut-torr-35",
+        "hudlakare-1177"
+      ],
+      "useFallbackDesc": [
+        "absolut-torr-35"
+      ],
       "article": {
         "text": "Funderar du på jontofores?",
         "link": "#",
@@ -152,7 +167,11 @@
     "severe": {
       "title": "Mycket kraftig hyperhidros",
       "text": "Din svettning verkar vara av en grad där professionell behandling är värd att utforska. Du är inte ensam – och det finns hjälp att få.",
-      "productIds": ["boka-hudlakare", "jontofores-info", "botox-info"],
+      "productIds": [
+        "boka-hudlakare",
+        "jontofores-info",
+        "botox-info"
+      ],
       "article": {
         "text": "Vill du läsa om hur jontofores fungerar?",
         "link": "#",
