@@ -17,6 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="products.js" defer></script>
 </head>
 <body>
     <header>
@@ -107,11 +108,16 @@
     <footer>
         <div class="container">
             <p><strong>Disclaimer:</strong> Jag är inte läkare. Innehållet på den här sajten är min personliga erfarenhet. Rådfråga alltid en hudläkare innan du börjar någon behandling.</p>
-            <p>© 2026 Svettfri. Sajten innehåller affiliate-länkar.</p>
+            <p>© 2026 Svettfri. Sajten innehåller affiliate-länkar (annonslänkar). Om du köper via en länk får jag en liten provision utan extra kostnad för dig.</p>
         </div>
     </footer>
 
     <script>
+        // ====================================================
+        // Quiz – läser quiz-rekommendationer från products.json
+        // via window.SVETTFRI_QUIZ_DATA (sätts av products.js)
+        // ====================================================
+
         const questions = [
             {
                 q: "Hur ofta märker du att du svettas mer än andra?",
@@ -151,121 +157,9 @@
             }
         ];
 
-        const recommendations = {
-            mild: {
-                title: "Mild svettning",
-                text: "Du verkar ha relativt lindrig svettning. Vanliga starka antiperspiranter räcker troligen för dig. Här är några förstahandsval:",
-                products: [
-                    {
-                        icon: "🧴",
-                        name: "Absolut Torr 35 ml",
-                        desc: "Prisvärd antiperspirant med aluminiumklorid. Bra första steg om vanlig deodorant inte räcker.",
-                        link: "https://www.apotea.se/absolut-torr-35-ml"
-                    },
-                    {
-                        icon: "💧",
-                        name: "Absolut Torr Roll-On 25 ml",
-                        desc: "Lättare applicering för dig som tycker droppflaska är obekvämt.",
-                        link: "https://www.apotea.se/absolut-torr-roll-on-25-ml"
-                    }
-                ],
-                article: {
-                    text: "Vill du jämföra olika antiperspiranter?",
-                    link: "driclor-vs-absolut-torr-vs-perspirex.html",
-                    cta: "Läs min jämförelse →"
-                }
-            },
-            moderate: {
-                title: "Måttlig hyperhidros",
-                text: "Din svettning påverkar troligen din vardag mer än normalt. Starkare aluminiumkloridprodukter är ett bra steg framåt:",
-                products: [
-                    {
-                        icon: "🧴",
-                        name: "Absolut Torr 35 ml",
-                        desc: "Min personliga favorit. Bäst förhållande pris/effekt av de jag testat.",
-                        link: "https://www.apotea.se/absolut-torr-35-ml"
-                    },
-                    {
-                        icon: "💎",
-                        name: "Perspirex Original 20 ml",
-                        desc: "Mildare formula, mindre sveda men dyrare per ml.",
-                        link: "https://www.apotea.se/perspirex"
-                    },
-                    {
-                        icon: "👕",
-                        name: "Svettabsorberande inlägg",
-                        desc: "Komplement för att skydda kläder medan antiperspiranten verkar.",
-                        link: "https://www.apotea.se/sok?q=svettabsorberande"
-                    }
-                ],
-                article: {
-                    text: "Vill du veta vilken som passar dig bäst?",
-                    link: "driclor-vs-absolut-torr-vs-perspirex.html",
-                    cta: "Läs min jämförelse av Driclor, Absolut Torr och Perspirex →"
-                }
-            },
-            strong: {
-                title: "Kraftig hyperhidros",
-                text: "Det låter som att svettningen påverkar ditt liv betydligt. Aluminiumklorid kan fortfarande vara ett alternativ – men du bör också utforska starkare behandlingar:",
-                products: [
-                    {
-                        icon: "🛡️",
-                        name: "Perspirex Maximum for Men 20 ml",
-                        desc: "En av de starkare antiperspiranterna på svenska marknaden.",
-                        link: "https://www.apotea.se/perspirex"
-                    },
-                    {
-                        icon: "🧴",
-                        name: "Absolut Torr 35 ml",
-                        desc: "Som första försök innan du går vidare till starkare behandlingar.",
-                        link: "https://www.apotea.se/absolut-torr-35-ml"
-                    },
-                    {
-                        icon: "🩺",
-                        name: "Konsultera hudläkare",
-                        desc: "På den här nivån är det värt att utreda jontofores eller Botox-behandling.",
-                        link: "https://www.1177.se"
-                    }
-                ],
-                article: {
-                    text: "Funderar du på jontofores?",
-                    link: "#",
-                    cta: "Min guide till jontofores (kommer snart)"
-                }
-            },
-            severe: {
-                title: "Mycket kraftig hyperhidros",
-                text: "Din svettning verkar vara av en grad där professionell behandling är värd att utforska. Du är inte ensam – och det finns hjälp att få.",
-                products: [
-                    {
-                        icon: "🩺",
-                        name: "Boka tid hos hudläkare",
-                        desc: "Första steget – en läkare kan diskutera jontofores, Botox eller andra alternativ.",
-                        link: "https://www.1177.se"
-                    },
-                    {
-                        icon: "⚡",
-                        name: "Jontofores-behandling",
-                        desc: "Behandling med svag elektrisk ström. Kan göras hemma efter läkarbedömning.",
-                        link: "#"
-                    },
-                    {
-                        icon: "💉",
-                        name: "Botox-information",
-                        desc: "Effektivt mot armhåle-svettning men kräver upprepade behandlingar.",
-                        link: "#"
-                    }
-                ],
-                article: {
-                    text: "Vill du läsa om hur jontofores fungerar?",
-                    link: "#",
-                    cta: "Min guide till jontofores (kommer snart)"
-                }
-            }
-        };
-
         let currentQuestion = 0;
         let totalScore = 0;
+        let pendingResult = false;  // sätts till true om resultat ska visas men data inte laddats än
 
         function loadQuestion() {
             const q = questions[currentQuestion];
@@ -305,8 +199,20 @@
             else if (totalScore <= 13) level = 'strong';
             else level = 'severe';
             
-            const rec = recommendations[level];
+            // Hämta rekommendationer från products.json (laddat av products.js)
+            const data = window.SVETTFRI_QUIZ_DATA;
+            if (!data || !data[level]) {
+                // Data inte laddad än – vänta på event
+                pendingResult = true;
+                document.getElementById('result-title').textContent = 'Laddar...';
+                document.getElementById('result-text').textContent = '';
+                return;
+            }
             
+            renderResult(data[level]);
+        }
+
+        function renderResult(rec) {
             let productsHtml = '';
             rec.products.forEach(p => {
                 productsHtml += `
@@ -315,7 +221,7 @@
                         <div class="rec-product-content">
                             <h4>${p.name}</h4>
                             <p>${p.desc}</p>
-                            <a href="${p.link}" target="_blank" rel="noopener" class="rec-button">Se mer →</a>
+                            <a href="${p.link}" target="_blank" rel="noopener nofollow sponsored" class="rec-button">Se mer →</a>
                         </div>
                     </div>
                 `;
@@ -329,9 +235,27 @@
             document.getElementById('rec-article-link').textContent = rec.article.cta;
         }
 
+        // Om quizet körts färdigt innan products.json laddats — rendera när data kommer
+        window.addEventListener('svettfri:loaded', () => {
+            if (pendingResult) {
+                let level;
+                if (totalScore <= 6) level = 'mild';
+                else if (totalScore <= 10) level = 'moderate';
+                else if (totalScore <= 13) level = 'strong';
+                else level = 'severe';
+                
+                const data = window.SVETTFRI_QUIZ_DATA;
+                if (data && data[level]) {
+                    pendingResult = false;
+                    renderResult(data[level]);
+                }
+            }
+        });
+
         function restartQuiz() {
             currentQuestion = 0;
             totalScore = 0;
+            pendingResult = false;
             document.querySelector('.quiz-question').style.display = 'block';
             document.getElementById('quiz-result').style.display = 'none';
             loadQuestion();
