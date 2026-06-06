@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies och dataskydd | Svettfri</title>
+    <meta name="description" content="Information om hur Svettfri använder cookies, Google Analytics och affiliate-spårning. Du kan ändra dina inställningar när som helst.">
+    <meta name="robots" content="noindex">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="cookie-consent.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html" style="text-decoration:none;color:inherit;">Svettfri</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Start</a></li>
+                <li><a href="om-mig.html">Om mig</a></li>
+                <li><a href="dagbok.html">Dagbok</a></li>
+                <li><a href="index.html#quiz">Quiz</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article class="article-page">
+        <div class="container">
+            <p class="article-meta">Cookies och dataskydd</p>
+            <h1>Om cookies på Svettfri</h1>
+            <p class="article-lead">Här förklarar jag exakt vilka cookies sajten använder, varför, och hur du själv styr dem. Du kan ändra dina val när som helst längst ner på den här sidan.</p>
+
+            <h2>Vad är cookies?</h2>
+            <p>Cookies är små textfiler som lagras i din webbläsare när du besöker en sajt. De används för att komma ihåg saker mellan besök – t.ex. om du redan svarat på en cookie-fråga, eller om du klickat på en affiliate-länk.</p>
+            <p>Vissa cookies är nödvändiga för att sajten ska fungera. Andra används för att mäta hur sajten används eller för att spåra affiliate-försäljningar. Jag använder bara så få cookies som möjligt, och du måste själv godkänna spårningscookies innan de aktiveras.</p>
+
+            <h2>Vilka cookies använder Svettfri?</h2>
+
+            <div class="comparison-card">
+                <h3>1. Nödvändig: cookie-samtycke</h3>
+                <p><strong>Vad:</strong> Sparar ditt val (acceptera/neka) så bannern inte dyker upp varje gång.</p>
+                <p><strong>Var:</strong> Lagras lokalt i din webbläsare, skickas aldrig till någon server.</p>
+                <p><strong>Hur länge:</strong> Tills du själv rensar din webbläsare eller återställer valet nedan.</p>
+                <p><strong>Krav på samtycke:</strong> Nej – nödvändig för funktionen.</p>
+            </div>
+
+            <div class="comparison-card">
+                <h3>2. Google Analytics (statistik)</h3>
+                <p><strong>Vad:</strong> Mäter anonymiserad statistik – t.ex. hur många besökare sajten har, vilka artiklar som läses mest, varifrån besökarna kommer (sökmotor, direktlänk, etc.).</p>
+                <p><strong>Använder cookies:</strong> Ja (_ga, _gid, _gat).</p>
+                <p><strong>IP-adress:</strong> Anonymiseras innan den skickas till Google.</p>
+                <p><strong>Hur länge:</strong> Upp till 2 år för analytics-cookies.</p>
+                <p><strong>Krav på samtycke:</strong> Ja – aktiveras bara om du klickat "Acceptera".</p>
+                <p><strong>Mer info:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Googles integritetspolicy</a></p>
+            </div>
+
+            <div class="comparison-card">
+                <h3>3. Affiliate-spårning</h3>
+                <p><strong>Vad:</strong> När du klickar på en produktlänk (t.ex. "Köp här") skickas du via en spårningstjänst (Adtraction) till partnerns sajt. En cookie sätts då i din webbläsare av <em>partnern</em> så de vet att du kom från Svettfri.</p>
+                <p><strong>Vem:</strong> Adtraction och respektive partner (t.ex. DOZ Apotek).</p>
+                <p><strong>Hur länge:</strong> Typiskt 30 dagar.</p>
+                <p><strong>Krav på samtycke:</strong> Aktiveras först när du själv klickar på en affiliate-länk. Du kan undvika dem helt genom att inte klicka.</p>
+                <p><strong>Inkomstpåverkan:</strong> Om du köper produkten inom cookie-tiden får jag en liten provision utan extra kostnad för dig.</p>
+            </div>
+
+            <h2>Vad händer om jag tackar nej?</h2>
+            <p>Sajten fungerar precis som vanligt. Du kan läsa alla artiklar, göra quiz:et, och kontakta mig.</p>
+            <p>Skillnaden är att jag inte ser dig i statistiken. Det är okej – det är ditt val. Min sajt ska inte tvinga fram något du inte är bekväm med.</p>
+
+            <h2>Hur länge sparas mina inställningar?</h2>
+            <p>Tills du själv rensar webbläsarens lagring, byter webbläsare, eller använder knappen nedan för att ändra dina val.</p>
+
+            <h2>Ändra dina cookie-inställningar</h2>
+            <p>Klicka på en av knapparna nedan för att uppdatera ditt val.</p>
+
+            <div style="display: flex; gap: 12px; flex-wrap: wrap; margin: 24px 0 32px;">
+                <button onclick="window.svettfriCookies.accept()" class="cta-button" style="background: var(--color-accent);">Acceptera cookies</button>
+                <button onclick="window.svettfriCookies.reject()" class="cta-button" style="background: var(--color-ink-soft);">Neka cookies</button>
+                <button onclick="window.svettfriCookies.reset()" class="cta-button" style="background: var(--color-warm); color: #1a1814;">Återställ – visa banner igen</button>
+            </div>
+
+            <h2>Vem är ansvarig?</h2>
+            <p>Jag som driver Svettfri.com är ansvarig för hanteringen av cookies på sajten. Har du frågor om dataskydd eller cookies, hör av dig via <a href="kontakt.html">kontaktsidan</a>.</p>
+
+            <h2>När uppdaterades den här sidan?</h2>
+            <p>Senast uppdaterad: 4 juni 2026. Den här sidan kan ändras när nya cookies tillkommer eller när lagstiftningen ändras.</p>
+
+            <div class="next-steps">
+                <h3>Mer om sajten</h3>
+                <a href="om-mig.html" class="link-arrow">Om mig och varför jag skriver →</a><br>
+                <a href="kontakt.html" class="link-arrow">Hör av dig om du har frågor →</a>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div class="container">
+            <p><strong>Disclaimer:</strong> Jag är inte läkare. Innehållet på den här sajten är min personliga erfarenhet. Rådfråga alltid en hudläkare innan du börjar någon behandling.</p>
+            <p>© 2026 Svettfri. Sajten innehåller affiliate-länkar (annonslänkar). <a href="cookies.html" style="color: rgba(255,255,255,0.85);">Cookies</a></p>
+        </div>
+    </footer>
+</body>
+</html>
